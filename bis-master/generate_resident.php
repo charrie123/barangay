@@ -74,146 +74,70 @@
                                             </div>
                                         </div>
                                         <div class="col-md-9">
-                                            <div class="row">
-                                                <div class="col">
-                                                    <div class="form-group row">
-                                                        <h3 class="mt-5 col-lg-4 col-md-4 col-sm-4 mt-sm-2 text-left">National ID:</h3>
-                                                    </div>
-                                                    <div class="col-lg-12 col-md-12 col-sm-12 text-left">
-                                                        <input type="text" class="form-control fw-bold" style="font-size:20px" value="<?= $resident['national_id'] ?>">
-                                                    </div>
-
-                                                    <div class="form-group row">
-                                                        <h3 class="mt-5 col-lg-4 col-md-4 col-sm-4 mt-sm-2 text-left">Name:</h3>
-                                                    </div>
-                                                    <div class="col-lg-12 col-md-12 col-sm-12 text-left">
-                                                        <input type="text" class="form-control fw-bold" style="font-size:20px" value="<?= ucwords($resident['firstname'].' '.$resident['middlename'].' '.$resident['lastname']) ?>">
-                                                    </div>
-                                                </div>
-                                                <div class="col">
-                                                    <div class="form-group row">
-                                                        <h3 class="mt-5 col-lg-4 col-md-4 col-sm-4 mt-sm-2 text-left">Status:</h3>
-                                                    </div>
-                                                    <div class="col-lg-12 col-md-12 col-sm-12 text-left">
-                                                        <input type="text" class="form-control fw-bold" style="font-size:20px" value="<?= $resident['resident_type']==1 ? 'Alive' : 'Deceased' ?>">
-                                                    </div>
-
-                                                    <div class="form-group row">
-                                                        <h3 class="mt-5 col-lg-4 col-md-4 col-sm-4 mt-sm-2 text-left">Alias:</h3>
-                                                    </div>
-                                                    <div class="col-lg-12 col-md-12 col-sm-12 text-left">
-                                                        <input type="text" class="form-control fw-bold" style="font-size:20px" value="<?= $resident['alias'] ?>">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col">
-                                            <div class="form-group row">
-                                                <h3 class="mt-5 col-lg-4 col-md-4 col-sm-4 mt-sm-2 text-left">Birthdate:</h3>
-                                            </div>
-                                            <div class="col-lg-12 col-md-12 col-sm-12 text-left">
-                                                <input type="text" class="form-control fw-bold" style="font-size:20px" value="<?= date('F d, Y', strtotime($resident['birthdate'])) ?>">
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="form-group row">
-                                                <h3 class="mt-5 col-lg-4 col-md-4 col-sm-4 mt-sm-2 text-left">Age:</h3>
-                                            </div>
-                                            <div class="col-lg-12 col-md-12 col-sm-12 text-left">
-                                                <input type="text" class="form-control fw-bold" style="font-size:20px" value="<?= $resident['age'] ?> yrs. old">
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="form-group row">
-                                                <h3 class="mt-5 col-lg-4 col-md-4 col-sm-4 mt-sm-2 text-left">Civil Status:</h3>
-                                            </div>
-                                            <div class="col-lg-12 col-md-12 col-sm-12 text-left">
-                                            <input type="text" class="form-control fw-bold" style="font-size:20px" value="<?= $resident['civilstatus'] ?>">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col">
-                                            <div class="form-group row">
-                                                <h3 class="mt-5 col-lg-4 col-md-4 col-sm-4 mt-sm-2 text-left">Gender:</h3>
-                                            </div>
-                                            <div class="col-lg-12 col-md-12 col-sm-12 text-left">
-                                                <input type="text" class="form-control fw-bold" style="font-size:20px" value="<?= $resident['gender'] ?>">
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="form-group row">
-                                                <h3 class="mt-5 col-lg-4 col-md-4 col-sm-4 mt-sm-2 text-left">Purok:</h3>
-                                            </div>
-                                            <div class="col-lg-12 col-md-12 col-sm-12 text-left">
-                                                <input type="text" class="form-control fw-bold" style="font-size:20px" value="<?= $resident['purok'] ?>">
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="form-group row">
-                                                <h3 class="mt-5 col-lg-4 col-md-4 col-sm-4 mt-sm-2 text-left">Voters Status:</h3>
-                                            </div>
-                                            <div class="col-lg-12 col-md-12 col-sm-12 text-left">
-                                            <input type="text" class="form-control fw-bold" style="font-size:20px" value="<?= $resident['voterstatus'] ?>">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col">
-                                            <div class="form-group row">
-                                                <h3 class="mt-5 col-lg-4 col-md-4 col-sm-4 mt-sm-2 text-left">Identified as:</h3>
-                                            </div>
-                                            <div class="col-lg-12 col-md-12 col-sm-12 text-left">
-                                                <input type="text" class="form-control fw-bold" style="font-size:20px" value="<?= $resident['identified_as'] ?>">
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="form-group row">
-                                                <h3 class="mt-5 col-lg-4 col-md-4 col-sm-4 mt-sm-2 text-left">Phone number:</h3>
-                                            </div>
-                                            <div class="col-lg-12 col-md-12 col-sm-12 text-left">
-                                                <input type="text" class="form-control fw-bold" style="font-size:20px" value="<?= $resident['phone'] ?>">
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="form-group row">
-                                                <h3 class="mt-5 col-lg-4 col-md-4 col-sm-4 mt-sm-2 text-left">Email Address:</h3>
-                                            </div>
-                                            <div class="col-lg-12 col-md-12 col-sm-12 text-left">
-                                            <input type="text" class="form-control fw-bold" style="font-size:20px" value="<?= $resident['email'] ?>">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col">
-                                            <div class="form-group row">
-                                                <h3 class="mt-5 col-lg-4 col-md-4 col-sm-4 mt-sm-2 text-left">Occupation:</h3>
-                                            </div>
-                                            <div class="col-lg-12 col-md-12 col-sm-12 text-left">
-                                                <textarea class="form-control fw-bold" style="font-size:20px" rows="3"><?= ucwords(trim($resident['occupation'])) ?></textarea>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col">
-                                            <div class="form-group row">
-                                                <h3 class="mt-5 col-lg-4 col-md-4 col-sm-4 mt-sm-2 text-left">Address:</h3>
-                                            </div>
-                                            <div class="col-lg-12 col-md-12 col-sm-12 text-left">
-                                                <textarea class="form-control fw-bold" style="font-size:20px" rows="3"><?= ucwords(trim($resident['address'])) ?></textarea>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col">
-                                            <div class="form-group row">
-                                                <h3 class="mt-5 col-lg-4 col-md-4 col-sm-4 mt-sm-2 text-left">Remarks:</h3>
-                                            </div>
-                                            <div class="col-lg-12 col-md-12 col-sm-12 text-left">
-                                                <textarea class="form-control fw-bold" style="font-size:20px" rows="3"><?= ucwords(trim($resident['remarks'])) ?></textarea>
-                                            </div>
+	                                        <table style="width: 100%;">
+			                                    <tbody>
+				                                    <tr>
+				                                        <td style="font-size:20px">National ID:</td>
+				                                        <td style="font-size:20px; font-weight: 700;"><?= $resident['national_id'] ?></td>
+			                                        </tr>
+			                                        <tr>
+				                                        <td style="font-size:20px">Name:</td>
+				                                        <td style="font-size:20px; font-weight: 700;"><?= $resident['firstname'] . ", " . $resident['middlename'] . ' ' . $resident['lastname'] ?></td>
+			                                        </tr>
+			                                        <tr>
+				                                        <td style="font-size:20px">Status:</td>
+				                                        <td style="font-size:20px; font-weight: 700;"><?= $resident['resident_type']==1 ? 'Alive' : 'Deceased' ?></td>
+			                                        </tr>
+			                                        <tr>
+				                                        <td style="font-size:20px">Nickname:</td>
+				                                        <td style="font-size:20px; font-weight: 700;"><?= $resident['alias'] ?></td>
+			                                        </tr>
+			                                        <tr>
+				                                        <td style="font-size:20px">Birthdate:</td>
+				                                        <td style="font-size:20px; font-weight: 700;"><?= date('F d, Y', strtotime($resident['birthdate'])) ?></td>
+			                                        </tr>
+			                                        <tr>
+				                                        <td style="font-size:20px">Age:</td>
+				                                        <td style="font-size:20px; font-weight: 700;"><?= $resident['age'] . " yrs. old" ?></td>
+				                                    </tr>
+			                                        <tr>
+				                                        <td style="font-size:20px">Civil Status:</td>
+				                                        <td style="font-size:20px; font-weight: 700;"><?= $resident['civilstatus'] ?></td>
+				                                    </tr>
+			                                        <tr>
+				                                        <td style="font-size:20px">Gender:</td>
+				                                        <td style="font-size:20px; font-weight: 700;"><?= $resident['gender'] ?></td>
+				                                    </tr>
+			                                        <tr>
+				                                        <td style="font-size:20px">Purok:</td>
+				                                        <td style="font-size:20px; font-weight: 700;"><?= $resident['purok'] ?></td>
+				                                    </tr>
+			                                        <tr>
+				                                        <td style="font-size:20px">Identified as:</td>
+				                                        <td style="font-size:20px; font-weight: 700;"><?= $resident['identified_as'] ?></td>
+				                                    </tr>
+			                                        <tr>
+				                                        <td style="font-size:20px">Phone number:</td>
+				                                        <td style="font-size:20px; font-weight: 700;"><?= $resident['phone'] ?></td>
+				                                    </tr>
+			                                        <tr>
+				                                        <td style="font-size:20px">Email Address:</td>
+				                                        <td style="font-size:20px; font-weight: 700;"><?= $resident['email'] ?></td>
+				                                    </tr>
+			                                        <tr>
+				                                        <td style="font-size:20px">Occupation:</td>
+				                                        <td style="font-size:20px; font-weight: 700;"><?= $resident['occupation'] ?></td>
+				                                    </tr>
+			                                        <tr>
+				                                        <td style="font-size:20px">Address:</td>
+				                                        <td style="font-size:20px; font-weight: 700;"><?= ucwords(trim($resident['address'])) ?></td>
+				                                    </tr>
+			                                        <tr>
+				                                        <td style="font-size:20px">Remarks:</td>
+				                                        <td style="font-size:20px; font-weight: 700;"><?= ucwords(trim($resident['remarks'])) ?></td>
+				                                    </tr>
+			                                    </tbody>
+	                                        </table>
                                         </div>
                                     </div>
                                             
