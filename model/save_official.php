@@ -7,7 +7,7 @@
         }
     }
     
-	$name 	= $conn->real_escape_string($_POST['name']);
+	$name 	= $conn->real_escape_string($_POST['lastName'] . ", " . $_POST['firstName'] . " " . $_POST['middleName']);
 	$chair 	= $conn->real_escape_string($_POST['chair']);
     $pos 	= $conn->real_escape_string($_POST['position']);
 	$start 	= $conn->real_escape_string($_POST['start']);

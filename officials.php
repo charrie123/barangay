@@ -181,8 +181,16 @@
                         <div class="modal-body">
                             <form method="POST" action="model/save_official.php" >
                                 <div class="form-group">
-                                    <label>Fullname</label>
-                                    <input type="text" class="form-control" placeholder="Enter Fullname" name="name" required>
+                                    <label>First Name</label>
+                                    <input type="text" class="form-control" placeholder="Enter First Name" name="firstName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Last Name</label>
+                                    <input type="text" class="form-control" placeholder="Enter Last Name" name="lastName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Middle Name</label>
+                                    <input type="text" class="form-control" placeholder="Enter Middle Name" name="middleName" required>
                                 </div>
 								<div class="form-group">
                                     <label>Chairmanship</label>
