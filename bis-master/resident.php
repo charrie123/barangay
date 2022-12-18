@@ -80,7 +80,7 @@
 												<tr>
 													<th scope="col">Fullname</th>
                                                     <th scope="col">National ID</th>
-													<th scope="col">Alias</th>
+													<th scope="col">Nickname</th>
 													<th scope="col">Birthdate</th>
 													<th scope="col">Age</th>
 													<th scope="col">Civil Status</th>
@@ -149,7 +149,7 @@
 												<tr>
                                                     <th scope="col">Fullname</th>
                                                     <th scope="col">National ID</th>
-													<th scope="col">Alias</th>
+													<th scope="col">Nickname</th>
 													<th scope="col">Birthdate</th>
 													<th scope="col">Age</th>
 													<th scope="col">Civil Status</th>
@@ -202,7 +202,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label>National ID No.</label>
-                                        <input type="text" class="form-control" name="national" placeholder="Enter National ID No." required>
+                                        <input type="text" class="form-control" name="national" placeholder="Enter National ID No." maxlength="16" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Citizenship</label>
@@ -233,7 +233,7 @@
                                     <div class="row">
                                         <div class="col">
                                             <div class="form-group">
-                                                <label>Alias</label>
+                                                <label>Nickname</label>
                                                 <input type="text" class="form-control" placeholder="Enter Alias" name="alias">
                                             </div>
                                         </div>
@@ -246,7 +246,7 @@
                                         <div class="col">
                                             <div class="form-group">
                                                 <label>Birthdate</label>
-                                                <input type="date" class="form-control" placeholder="Enter Birthdate" name="bdate" required>
+                                                <input type="date" class="form-control" placeholder="Enter Birthdate" id="bsdate" name="bdate" onChange="pickerNew();" required>
                                             </div>
                                         </div>
                                     </div>
@@ -254,7 +254,7 @@
                                         <div class="col">
                                             <div class="form-group">
                                                 <label>Age</label>
-                                                <input type="number" class="form-control" placeholder="Enter Age" min="1" name="age" required>
+                                                <input type="number" class="form-control" placeholder="Enter Age" min="1" id="sage" name="age" required>
                                                 </div>
                                             </div>
                                             <div class="col">
@@ -393,7 +393,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label>National ID No.</label>
-                                        <input type="text" class="form-control" name="national" id="nat_id" placeholder="Enter National ID No.">
+                                        <input type="text" class="form-control" name="national" id="nat_id" placeholder="Enter National ID No." maxlength="16">
                                     </div>
                                     <div class="form-group">
                                         <label>Citizenship</label>
@@ -424,7 +424,7 @@
                                     <div class="row">
                                         <div class="col">
                                             <div class="form-group">
-                                                <label>Alias</label>
+                                                <label>Nickname</label>
                                                 <input type="text" class="form-control" placeholder="Enter Alias" id="alias" name="alias">
                                             </div>
                                         </div>
@@ -437,7 +437,7 @@
                                         <div class="col">
                                             <div class="form-group">
                                                 <label>Birthdate</label>
-                                                <input type="date" class="form-control" placeholder="Enter Birthdate" name="bdate" id="bdate" required>
+                                                <input type="date" class="form-control" placeholder="Enter Birthdate" name="bdate" id="bedate" onChange="picker();" required>
                                             </div>
                                         </div>
                                     </div>
@@ -561,6 +561,26 @@
         $(document).ready(function() {
             $('#residenttable').DataTable();
         });
+
+        function picker() {
+	        var dob = new Date(document.getElementById('bedate').value);
+            var month_diff = Date.now() - dob.getTime();
+            var age_dt = new Date(month_diff);
+            var year = age_dt.getUTCFullYear();
+            var age = Math.abs(year - 1970);
+			document.getElementById('age').innerHTML = age;
+			document.getElementById('age').value = age;
+        }
+
+        function pickerNew() {
+	        var dob = new Date(document.getElementById('bsdate').value);
+            var month_diff = Date.now() - dob.getTime();
+            var age_dt = new Date(month_diff);
+            var year = age_dt.getUTCFullYear();
+            var age = Math.abs(year - 1970);
+			document.getElementById('sage').innerHTML = age;
+			document.getElementById('sage').value = age;
+        }
     </script>
 </body>
 </html>
