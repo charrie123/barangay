@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="10859d4a-37f6-4dd9-8ff1-670d30f6dbf3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/save_official.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/save_official.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/officials.php" beforeDir="false" afterPath="$PROJECT_DIR$/officials.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bis-master/generate_indi_cert.php" beforeDir="false" afterPath="$PROJECT_DIR$/bis-master/generate_indi_cert.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

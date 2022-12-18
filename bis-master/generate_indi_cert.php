@@ -30,7 +30,16 @@
 
             /* this affects the margin in the printer settings */ 
             margin: 20mm 20mm 20mm 20mm;  
-        } 
+        }
+        @print {
+            @page :footer {
+                display: none
+            }
+
+            @page :header {
+                display: none
+            }
+        }
 
     </style>
 </head>
