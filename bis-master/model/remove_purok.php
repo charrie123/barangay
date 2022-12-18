@@ -8,11 +8,15 @@
 	}
 	
 	$id 	= $conn->real_escape_string($_GET['id']);
+	$name 	= $conn->real_escape_string($_GET['name']);
 
 	if($id != ''){
 		$query 		= "DELETE FROM tblpurok WHERE id = '$id'";
 		
 		$result 	= $conn->query($query);
+
+		$resultQuery 	= "UPDATE tblresident SET purok = '' WHERE purok = '$name'";
+		$result 	= $conn->query($resultQuery);
 		
 		if($result === true){
             $_SESSION['message'] = 'Purok has been removed!';
