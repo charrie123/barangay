@@ -79,7 +79,10 @@
 											</thead>
 											<tbody>
 												<?php if(!empty($revenue)): ?>
-													<?php $no=1; foreach($revenue as $row): ?>
+													$total = 0;
+													<?php $no=1; foreach($revenue as $row):
+													$total += $row['amounts'];
+													?>
 													<tr>
 														<td><?= $row['date'] ?></td>
 														<td><?= $row['name'] ?></td>
@@ -95,7 +98,7 @@
                                                     <th scope="col">Date</th>
 													<th scope="col">Recipient</th>
 													<th scope="col">Details</th>
-													<th scope="col">Amount</th>
+													<th scope="col">Total: <?php echo $total;?></th>
 													<th scope="col">Username</th>
 												</tr>
 											</tfoot>
