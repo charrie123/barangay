@@ -79,9 +79,12 @@
 											</thead>
 											<tbody>
 												<?php if(!empty($revenue)): ?>
-													<?php $no=1; foreach($revenue as $row): ?>
+													<?php $no=1; foreach($revenue as $row):
+														$date=date_create($row['date']);
+														$price+=$row['amounts'];
+													?>
 													<tr>
-														<td><?= $row['date'] ?></td>
+														<td><?= date_format($date,"M d, Y") ?></td>
 														<td><?= $row['name'] ?></td>
 														<td><?= $row['details'] ?></td>
 														<td>P <?= number_format($row['amounts'],2) ?></td>
@@ -95,7 +98,7 @@
                                                     <th scope="col">Date</th>
 													<th scope="col">Recipient</th>
 													<th scope="col">Details</th>
-													<th scope="col">Amount</th>
+													<th scope="col">P <?= number_format($price,2) ?></th>
 													<th scope="col">Username</th>
 												</tr>
 											</tfoot>
