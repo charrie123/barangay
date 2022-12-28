@@ -108,7 +108,7 @@
                                         </div>
                                         <div class="col-6 col-stats">
                                             <div class="numbers">
-                                                <p class="card-category">Positive Voters</p>
+                                                <p class="card-category">Registered Voters</p>
                                                 <h4 class="card-title"><?= number_format($pos) ?></h4>
                                             </div>
                                         </div>
@@ -129,7 +129,7 @@
                                         </div>
                                         <div class="col-6 col-stats">
                                             <div class="numbers">
-                                                <p class="card-category">Negative Voters</p>
+                                                <p class="card-category">Non-registered Voters</p>
                                                 <h4 class="card-title"><?= number_format($nega) ?></h4>
                                             </div>
                                         </div>
@@ -234,7 +234,7 @@
                                                         <td><?= $row['gender'] ?></td>
                                                         <td><?= $row['purok'] ?></td>
                                                         <td><?= $row['voterstatus'] ?></td>
-                                                        <td><?= $row['identified_as'] ?></td>
+	                                                        <td><?= $row['identified_as'] == "Positive" ? "Registered" : "Non-registered" ?></td>
                                                     </tr>
                                                     <?php $no++; endforeach ?>
                                                 <?php endif ?>
