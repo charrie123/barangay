@@ -212,11 +212,11 @@
                                 </div>
 								<div class="form-group">
                                     <label>Term Start</label>
-                                    <input type="date" class="form-control" name="start" required>
+                                    <input type="date" class="form-control" id="addStart" name="start" onchange="addTermCalculator();" required>
                                 </div>
 								<div class="form-group">
                                     <label>Term End</label>
-                                    <input type="date" class="form-control" name="end" required>
+                                    <input type="date" class="form-control" id="addEnd" name="end" disabled>
                                 </div>
 								<div class="form-group">
                                     <label>Status</label>
@@ -273,11 +273,11 @@
                                 </div>
 								<div class="form-group">
                                     <label>Term Start</label>
-                                    <input type="date" class="form-control" id="start" name="start" required>
+                                    <input type="date" class="form-control" id="start" name="start" onchange="termCalculator();" required>
                                 </div>
 								<div class="form-group">
                                     <label>Term End</label>
-                                    <input type="date" class="form-control" id="end" name="end" required>
+                                    <input type="date" class="form-control" id="end" name="end" disabled>
                                 </div>
 								<div class="form-group">
                                     <label>Status</label>
@@ -306,4 +306,20 @@
 	</div>
 	<?php include 'templates/footer.php' ?>
 </body>
+<script>
+	function addYears(date, years) {
+		date.setFullYear(date.getFullYear() + years);
+		return date;
+	}
+	function termCalculator() {
+		let date = new Date(document.getElementById("start").value);
+		let newDate = addYears(date, 3);
+		document.getElementById("end").value = newDate.getFullYear() + "-" + ("0"+(newDate.getMonth()+1)).slice(-2) + "-" + ("0" + newDate.getDate()).slice(-2);
+	}
+	function addTermCalculator() {
+		let date = new Date(document.getElementById("addStart").value);
+		let newDate = addYears(date, 3);
+		document.getElementById("addEnd").value = newDate.getFullYear() + "-" + ("0"+(newDate.getMonth()+1)).slice(-2) + "-" + ("0" + newDate.getDate()).slice(-2);
+	}
+</script>
 </html>
