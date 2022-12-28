@@ -21,7 +21,6 @@
 <head>
 	<?php include 'templates/header.php' ?>
 	<title>Resident Information -  Barangay Management System</title>
-
 </head>
 <body>
 <?php include 'templates/loading_screen.php' ?>
@@ -81,7 +80,7 @@
 												<tr>
 													<th scope="col">Fullname</th>
                                                     <th scope="col">National ID</th>
-													<th scope="col">Alias</th>
+													<th scope="col">Nickname</th>
 													<th scope="col">Birthdate</th>
 													<th scope="col">Age</th>
 													<th scope="col">Civil Status</th>
@@ -118,11 +117,11 @@
                                                         <?php endif ?>
 														<td>
 															<div class="form-button-action">
-                                                                <a type="button" href="#edit" data-toggle="modal" class="btn btn-link btn-primary" title="View Resident" onclick="editResident(this)" 
+                                                                <a type="button" href="#edit" data-toggle="modal" class="btn btn-link btn-primary" title="View Resident" onclick="editResident(this)"
                                                                     data-id="<?= $row['id'] ?>" data-national="<?= $row['national_id'] ?>" data-fname="<?= $row['firstname'] ?>" data-mname="<?= $row['middlename'] ?>" data-lname="<?= $row['lastname'] ?>"
                                                                     data-alias="<?= $row['alias'] ?>" data-bplace="<?= $row['birthplace'] ?>" data-bdate="<?= $row['birthdate'] ?>" data-age="<?= $row['age'] ?>"
                                                                     data-cstatus="<?= $row['civilstatus'] ?>" data-gender="<?= $row['gender'] ?>"data-purok="<?= $row['purok'] ?>" data-vstatus="<?= $row['voterstatus'] ?>"
-                                                                    data-indetity="<?= $row['identified_as'] ?>" data-number="<?= $row['phone'] ?>" data-email="<?= $row['email'] ?>" data-address="<?= $row['address'] ?>" 
+                                                                    data-indetity="<?= $row['identified_as'] ?>" data-number="<?= $row['phone'] ?>" data-email="<?= $row['email'] ?>" data-address="<?= $row['address'] ?>"
                                                                     data-img="<?= $row['picture'] ?>" data-citi="<?= $row['citizenship'];?>" data-occu="<?= $row['occupation'] ?>" data-dead="<?= $row['resident_type'];?>" data-remarks="<?= $row['remarks'] ?>">
                                                                     <?php if(isset($_SESSION['username'])): ?>
                                                                     <i class="fa fa-edit"></i>
@@ -141,7 +140,7 @@
 															</div>
 														</td>
                                                         <?php endif ?>
-														
+
 													</tr>
 													<?php $no++; endforeach ?>
 												<?php endif ?>
@@ -150,7 +149,7 @@
 												<tr>
                                                     <th scope="col">Fullname</th>
                                                     <th scope="col">National ID</th>
-													<th scope="col">Alias</th>
+													<th scope="col">Nickname</th>
 													<th scope="col">Birthdate</th>
 													<th scope="col">Age</th>
 													<th scope="col">Civil Status</th>
@@ -193,7 +192,7 @@
                                     </div>
                                     <div class="form-group d-flex justify-content-center">
                                         <button type="button" class="btn btn-danger btn-sm mr-2" id="open_cam">Open Camera</button>
-                                        <button type="button" class="btn btn-secondary btn-sm ml-2" onclick="save_photo()">Capture</button>   
+                                        <button type="button" class="btn btn-secondary btn-sm ml-2" onclick="save_photo()">Capture</button>
                                     </div>
                                     <div id="profileImage">
                                         <input type="hidden" name="profileimg">
@@ -203,7 +202,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label>National ID No.</label>
-                                        <input type="text" class="form-control" name="national" placeholder="Enter National ID No." required>
+                                        <input type="text" class="form-control" name="national" placeholder="Enter National ID No." maxlength="16" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Citizenship</label>
@@ -234,7 +233,7 @@
                                     <div class="row">
                                         <div class="col">
                                             <div class="form-group">
-                                                <label>Alias</label>
+                                                <label>Nickname</label>
                                                 <input type="text" class="form-control" placeholder="Enter Alias" name="alias">
                                             </div>
                                         </div>
@@ -247,16 +246,15 @@
                                         <div class="col">
                                             <div class="form-group">
                                                 <label>Birthdate</label>
-                                                <input type="date" class="form-control" placeholder="Enter Birthdate" name="bdate" required>
+                                                <input type="date" class="form-control" placeholder="Enter Birthdate" id="bsdate" name="bdate" onChange="pickerNew();" required>
                                             </div>
                                         </div>
                                     </div>
-
                                     <div class="row">
                                         <div class="col">
                                             <div class="form-group">
                                                 <label>Age</label>
-                                                <input type="number" class="form-control" placeholder="Enter Age" min="1" name="age" required>
+                                                <input type="number" class="form-control" placeholder="Enter Age" min="1" id="sage" name="age" required>
                                                 </div>
                                             </div>
                                             <div class="col">
@@ -314,7 +312,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="row">
                                         <div class="col">
                                             <div class="form-group">
@@ -325,13 +323,8 @@
                                         <div class="col">
                                             <div class="form-group">
                                                 <label>Contact Number</label>
-                                                <div class="input-group mb-2">
-                                                    <div class="input-group-prepend">
-                                                    <div class="input-group-text">+63</div>
-                                                </div>
-                                                <input type="number" class="form-control" placeholder="Enter Contact Number "  name="number" maxlength="11">
+                                                <input type="text" class="form-control" placeholder="Enter Contact Number" name="number">
                                             </div>
-                                                    </div>
                                         </div>
                                         <div class="col">
                                             <div class="form-group">
@@ -377,7 +370,7 @@
                                     <?php if(isset($_SESSION['username'])):?>
                                     <div class="form-group d-flex justify-content-center">
                                         <button type="button" class="btn btn-danger btn-sm mr-2" id="open_cam1">Open Camera</button>
-                                        <button type="button" class="btn btn-secondary btn-sm ml-2" onclick="save_photo1()">Capture</button>   
+                                        <button type="button" class="btn btn-secondary btn-sm ml-2" onclick="save_photo1()">Capture</button>
                                     </div>
                                     <div id="profileImage1">
                                         <input type="hidden" name="profileimg">
@@ -400,7 +393,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label>National ID No.</label>
-                                        <input type="text" class="form-control" name="national" id="nat_id" placeholder="Enter National ID No.">
+                                        <input type="text" class="form-control" name="national" id="nat_id" placeholder="Enter National ID No." maxlength="16">
                                     </div>
                                     <div class="form-group">
                                         <label>Citizenship</label>
@@ -431,7 +424,7 @@
                                     <div class="row">
                                         <div class="col">
                                             <div class="form-group">
-                                                <label>Alias</label>
+                                                <label>Nickname</label>
                                                 <input type="text" class="form-control" placeholder="Enter Alias" id="alias" name="alias">
                                             </div>
                                         </div>
@@ -444,7 +437,7 @@
                                         <div class="col">
                                             <div class="form-group">
                                                 <label>Birthdate</label>
-                                                <input type="date" class="form-control" placeholder="Enter Birthdate" name="bdate" id="bdate" required>
+                                                <input type="date" class="form-control" placeholder="Enter Birthdate" name="bdate" id="bdate" onChange="picker();" required>
                                             </div>
                                         </div>
                                     </div>
@@ -511,7 +504,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="row">
                                         <div class="col">
                                             <div class="form-group">
@@ -519,18 +512,12 @@
                                                 <input type="email" class="form-control" placeholder="Enter Email" name="email" id="email">
                                             </div>
                                         </div>
-
                                         <div class="col">
                                             <div class="form-group">
                                                 <label>Contact Number</label>
-                                                 <div class="input-group mb-2">
-                                                    <div class="input-group-prepend">
-                                                    <div class="input-group-text">+63</div>
-                                                </div>
-                                                <input type="number" class="form-control" placeholder="Enter Contact Number" name="number" id="number" maxlength="11">
+                                                <input type="text" class="form-control" placeholder="Enter Contact Number" name="number" id="number">
                                             </div>
                                         </div>
-
                                         <div class="col">
                                             <div class="form-group">
                                                 <label>Occupation</label>
@@ -574,6 +561,26 @@
         $(document).ready(function() {
             $('#residenttable').DataTable();
         });
+
+        function picker() {
+	        var dob = new Date(document.getElementById('bdate').value);
+            var month_diff = Date.now() - dob.getTime();
+            var age_dt = new Date(month_diff);
+            var year = age_dt.getUTCFullYear();
+            var age = Math.abs(year - 1970);
+			document.getElementById('age').innerHTML = age;
+			document.getElementById('age').value = age;
+        }
+
+        function pickerNew() {
+	        var dob = new Date(document.getElementById('bsdate').value);
+            var month_diff = Date.now() - dob.getTime();
+            var age_dt = new Date(month_diff);
+            var year = age_dt.getUTCFullYear();
+            var age = Math.abs(year - 1970);
+			document.getElementById('sage').innerHTML = age;
+			document.getElementById('sage').value = age;
+        }
     </script>
 </body>
 </html>
