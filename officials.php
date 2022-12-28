@@ -123,7 +123,7 @@
   																</button>
   																<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
   																<a type="button" href="#edit" data-toggle="modal" class="btn btn-link btn-primary" 
-																		title="Edit Position" onclick="editOfficial(this)" data-id="<?= $row['id'] ?>" data-name="<?= $row['name'] ?>" 
+																		title="Edit Position" onclick="editOfficial(this)" data-id="<?= $row['id'] ?>" data-fame="<?= $row['name']; ?>"
 																		data-chair="<?= $row['chair_id'] ?>" data-pos="<?= $row['pos_id'] ?>" data-start="<?= $row['termstart'] ?>" 
 																		data-end="<?= $row['termend'] ?>" data-status="<?= $row['status'] ?>" >
 																		<i class="fa fa-edit"></i>
@@ -250,8 +250,16 @@
                         <div class="modal-body">
                             <form method="POST" action="model/edit_official.php" >
                                 <div class="form-group">
-                                    <label>Fullname</label>
-                                    <input type="text" class="form-control" id="name" placeholder="Enter Fullname" name="name" required>
+                                    <label>First Name</label>
+                                    <input type="text" class="form-control" placeholder="Enter First Name" name="fame" id="fame" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Last Name</label>
+                                    <input type="text" class="form-control" placeholder="Enter Last Name" name="lastName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Middle Name</label>
+                                    <input type="text" class="form-control" placeholder="Enter Middle Name" name="middleName" required>
                                 </div>
 								<div class="form-group">
                                     <label>Chairmanship</label>
