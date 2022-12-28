@@ -169,6 +169,7 @@
 			// Refilter the table
 			$('#min, #max').on('change', function () {
 				total = 0;
+				document.getElementById("total").innerHTML = "P 0.00";
 				table.draw();
 			});
         });
