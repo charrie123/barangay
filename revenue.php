@@ -78,11 +78,13 @@
 												</tr>
 											</thead>
 											<tbody>
-												<?php if(!empty($revenue)): ?>
-													<?php $no=1; foreach($revenue as $row):
+												<?php if(!empty($revenue)):
+											        $no=1;
+											        $price=0;
+											        foreach($revenue as $row):
 														$date=date_create($row['date']);
 														$price+=$row['amounts'];
-													?>
+												?>
 													<tr>
 														<td><?= date_format($date,"M d, Y") ?></td>
 														<td><?= $row['name'] ?></td>
@@ -98,7 +100,7 @@
                                                     <th scope="col">Date</th>
 													<th scope="col">Recipient</th>
 													<th scope="col">Details</th>
-													<th scope="col">P <?= number_format($price,2) ?></th>
+													<th scope="col" id="total">P <?= number_format($price,2) ?></th>
 													<th scope="col">Username</th>
 												</tr>
 											</tfoot>
@@ -125,7 +127,7 @@
 	<script src="assets/js/plugin/datatables/Buttons-1.6.1/js/dataTables.buttons.min.js"></script>
 	<script src="assets/js/plugin/datatables/Buttons-1.6.1/js/buttons.print.min.js"></script>
     <script>
-		var minDate, maxDate;
+		var minDate, maxDate, total = 0;
  
 		// Custom filtering function which will search data in column four between two values
 		$.fn.dataTable.ext.search.push(
@@ -133,13 +135,15 @@
 				var min = minDate.val();
 				var max = maxDate.val();
 				var date = new Date( data[0] );
-		
+
 				if (
 					( min === null && max === null ) ||
 					( min === null && date <= max ) ||
 					( min <= date   && max === null ) ||
 					( min <= date   && date <= max )
 				) {
+					total += parseInt(data[3].slice(2).replace(/,/g, ''), 10);
+					document.getElementById("total").innerHTML = "P " + total.toLocaleString("en-US", {minimumFractionDigits: 2, maximumFractionDigits: 2});
 					return true;
 				}
 				return false;
@@ -164,6 +168,7 @@
 
 			// Refilter the table
 			$('#min, #max').on('change', function () {
+				total = 0;
 				table.draw();
 			});
         });

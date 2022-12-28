@@ -228,7 +228,7 @@
                                                         <td><?= $row['gender'] ?></td>
                                                         <td><?= $row['purok'] ?></td>
                                                         <td><?= $row['voterstatus'] ?></td>
-                                                        <td><?= $row['identified_as'] == "Positive" ? "Registered" : "Non-registered" ?></td>
+	                                                        <td><?= $row['identified_as'] == "Positive" ? "Registered" : "Non-registered" ?></td>
                                                     </tr>
                                                     <?php $no++; endforeach ?>
                                                 <?php endif ?>
