@@ -12,15 +12,15 @@
 
 	if($id != ''){
 		$query 		= "DELETE FROM tblpurok WHERE id = '$id'";
-		
+
 		$result 	= $conn->query($query);
 
-		$residentQuery = "UPDATE tblresident SET purok = '' WHERE purok = '$name'";
-		
+		$residentQuery = $conn->query("UPDATE tblresident SET purok = '' WHERE purok = '$name'");
+
 		if($result === true){
             $_SESSION['message'] = 'Purok has been removed!';
             $_SESSION['success'] = 'danger';
-            
+
         }else{
             $_SESSION['message'] = 'Something went wrong!';
             $_SESSION['success'] = 'danger';

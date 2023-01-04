@@ -84,7 +84,7 @@
                                                                     data-name="<?= $row['name'] ?>" data-details="<?= $row['details'] ?>" data-id="<?= $row['id'] ?>">
                                                                     <i class="fa fa-edit"></i>
                                                                 </a>
-                                                                <a type="button" data-toggle="tooltip" href="model/remove_purok.php?id=<?= $row['id'] ?>" onclick="return confirm('Are you sure you want to delete this purok?');" class="btn btn-link btn-danger" data-original-title="Remove">
+                                                                <a type="button" data-toggle="tooltip" href="model/remove_purok.php?id=<?= $row['id'] ?>&name=<?= $row['name'] ?>" onclick="return confirm('Are you sure you want to delete this purok?');" class="btn btn-link btn-danger" data-original-title="Remove">
                                                                     <i class="fa fa-times"></i>
                                                                 </a>
                                                             </div>
