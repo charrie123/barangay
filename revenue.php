@@ -135,6 +135,12 @@
 				var min = minDate.val();
 				var max = maxDate.val();
 				var date = new Date( data[0] );
+				if (min) {
+					min = new Date(min.toUTCString('en-US', {timeZone: 'UTC',}).toString().slice(0, 16));
+				}
+				if (max) {
+					max = new Date(max.toUTCString('en-US', {timeZone: 'UTC',}).toString().slice(0, 16));
+				}
 
 				if (
 					( min === null && max === null ) ||
@@ -152,11 +158,12 @@
         $(document).ready(function() {
 			 // Create date inputs
 			 minDate = new DateTime($('#min'), {
-				format: 'MMMM Do YYYY'
+				format: 'MMMM Do YYYY',
 			});
 			maxDate = new DateTime($('#max'), {
 				format: 'MMMM Do YYYY'
 			});
+// 			maxDate->setTime(0, 0, 0);
 
             var table = $('#revenuetable').DataTable({
 				"order": [[ 0, "desc" ]],
