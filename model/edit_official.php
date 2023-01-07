@@ -27,7 +27,7 @@
 
 		}else{
 
-			$_SESSION['message'] = 'Somethin went wrong!';
+			$_SESSION['message'] = $end;
 			$_SESSION['success'] = 'danger';
 		}
 
