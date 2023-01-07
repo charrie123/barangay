@@ -29,7 +29,7 @@
             size: auto;   /* auto is the initial value */ 
 
             /* this affects the margin in the printer settings */ 
-            margin: 20mm 20mm 20mm 20mm;  
+            margin: 20mm 20mm 20mm 20mm;
         } 
 
     </style>

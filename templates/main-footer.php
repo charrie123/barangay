@@ -82,7 +82,7 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body" style="background-image:url('assets/img/db.jpg'); background-size:cover;">
+            <div class="modal-body">
                 <form method="POST" action="model/save_support.php">
                     <div class="row">
                         <div class="col-md-6">
