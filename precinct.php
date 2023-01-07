@@ -131,7 +131,7 @@
                                     <input type="text" class="form-control" placeholder="Enter Precinct No" name="precinct" required>
                                 </div>
                                 <div class="form-group">
-                                    <label>Precinct Details(Optional)</label>
+                                    <label>Precinct Details</label>
                                     <textarea class="form-control" placeholder="Enter Precinct details" name="details"></textarea>
                                 </div>
                             
@@ -162,7 +162,7 @@
                                     <input type="text" class="form-control" id="precinct" placeholder="Enter Precinct No" name="precinct" required>
                                 </div>
                                 <div class="form-group">
-                                    <label>Purok Details(Optional)</label>
+                                    <label>Purok Details</label>
                                     <textarea class="form-control" id="details" placeholder="Enter Precinct Details" name="details"></textarea>
                                 </div>
                             
