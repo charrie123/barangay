@@ -286,7 +286,7 @@
                                 </div>
 								<div class="form-group">
                                     <label>Term End</label>
-                                    <input type="date" class="form-control" id="end" name="end">
+                                    <input type="date" class="form-control" id="end" name="end" readonlyg>
                                 </div>
 								<div class="form-group">
                                     <label>Status</label>
