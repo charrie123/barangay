@@ -117,11 +117,7 @@
 
 
 																<td>
-																<div class="dropdown">
-  																<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    																Edit
-  																</button>
-  																<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+																
   																<a type="button" href="#edit" data-toggle="modal" class="btn btn-link btn-primary" 
 																		title="Edit Position" onclick="editOfficial(this)" data-id="<?= $row['id'] ?>" data-name="<?= explode(' ', $row['name'])[0]; ?>"
 																		data-chair="<?= $row['chair_id'] ?>" data-pos="<?= $row['pos_id'] ?>" data-start="<?= $row['termstart'] ?>" 
@@ -134,8 +130,7 @@
 																		<i class="fa fa-times"></i>
 																	</a>
 																	<?php endif ?>
-  </div>
-</div>
+  
 																	
 																</td>
 															<?php endif?>
