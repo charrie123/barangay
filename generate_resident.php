@@ -81,7 +81,7 @@
                                             </tr>
                                             <tr>
                                                 <td>Name:</td>
-                                                <td><?= $resident['national_id'] ?></td>
+                                                <td><?= ucwords($resident['firstname'].' '.$resident['middlename'].' '.$resident['lastname']) ?></td>
                                             </tr>
                                             <tr>
                                                 <td>Status:</td>
