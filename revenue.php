@@ -169,9 +169,20 @@
 				"order": [[ 0, "desc" ]],
 				dom: 'Bfrtip',
 				buttons: [
-					'print'
-				]
-				});
+                {
+                    extend: 'print',
+                    className: 'green glyphicon glyphicon-print',
+                    title: 'Report',
+                    text: 'Print',
+                    footer: true,
+                    exportOptions: {
+                        modifier: {
+                            page: 'current'
+                        }
+                    }
+                }
+				],
+			});
 
 			// Refilter the table
 			$('#min, #max').on('change', function () {

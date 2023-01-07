@@ -281,7 +281,7 @@
                                 </div>
 								<div class="form-group">
                                     <label>Term End</label>
-                                    <input type="date" class="form-control" id="end" name="end" disabled>
+                                    <input type="date" class="form-control" id="end" name="end" readonlyg>
                                 </div>
 								<div class="form-group">
                                     <label>Status</label>
@@ -319,11 +319,13 @@
 		let date = new Date(document.getElementById("start").value);
 		let newDate = addYears(date, 3);
 		document.getElementById("end").value = newDate.getFullYear() + "-" + ("0"+(newDate.getMonth()+1)).slice(-2) + "-" + ("0" + newDate.getDate()).slice(-2);
+		document.getElementById("end").innerText = newDate.getFullYear() + "-" + ("0"+(newDate.getMonth()+1)).slice(-2) + "-" + ("0" + newDate.getDate()).slice(-2);
 	}
 	function addTermCalculator() {
 		let date = new Date(document.getElementById("addStart").value);
 		let newDate = addYears(date, 3);
 		document.getElementById("addEnd").value = newDate.getFullYear() + "-" + ("0"+(newDate.getMonth()+1)).slice(-2) + "-" + ("0" + newDate.getDate()).slice(-2);
+		document.getElementById("addEnd").innerText = newDate.getFullYear() + "-" + ("0"+(newDate.getMonth()+1)).slice(-2) + "-" + ("0" + newDate.getDate()).slice(-2);
 	}
 </script>
 </html>
