@@ -113,6 +113,9 @@ INSERT INTO `tblchairmanship` (`id`, `title`) VALUES
 CREATE TABLE `tblofficials` (
   `id` int(11) NOT NULL,
   `name` varchar(50) DEFAULT NULL,
+  `firstName` varchar(50),
+  `lastName` varchar(50),
+  `middleName` varchar(50),
   `chairmanship` varchar(50) DEFAULT NULL,
   `position` varchar(50) DEFAULT NULL,
   `termstart` date DEFAULT NULL,
@@ -492,3 +495,4 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+reservation
