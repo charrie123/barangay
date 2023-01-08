@@ -39,6 +39,8 @@ function editPrecinct(that){
 function editOfficial(that){
     id = $(that).attr('data-id');
     na = $(that).attr('data-name');
+    last = $(that).attr('data-last');
+    middle = $(that).attr('data-middle');
     chair = $(that).attr('data-chair');
     pos = $(that).attr('data-pos');
     start = $(that).attr('data-start');
@@ -47,6 +49,8 @@ function editOfficial(that){
     
     $('#off_id').val(id);
     $('#name').val(na);
+    $('#last').val(last);
+    $('#middleName').val(middle);
     $('#chair').val(chair);
     $('#position').val(pos);
     $('#start').val(start);
