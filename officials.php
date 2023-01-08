@@ -119,10 +119,10 @@
 																<td>
 																
   																<a type="button" href="#edit" data-toggle="modal" class="btn btn-link btn-primary" 
-																		title="Edit Position" onclick="editOfficial(this)" data-id="<?= $row['id'] ?>" data-name="<?= explode(' ', $row['name'])[0]; ?>"
+																		title="Edit Position" onclick="editOfficial(this)" data-id="<?= $row['id'] ?>" data-name="<?= $row['firstName'] ?>"
+																		data-last="<?= $row['lastName'] ?>" data-middle="<?= $row['middleName'] ?>"
 																		data-chair="<?= $row['chair_id'] ?>" data-pos="<?= $row['pos_id'] ?>" data-start="<?= $row['termstart'] ?>" 
-																		data-end="<?= $row['termend'] ?>" data-status="<?= $row['status'] ?>"
-																		data-last="<?= explode(' ', $row['name'])[1]; ?>">
+																		data-end="<?= $row['termend'] ?>" data-status="<?= $row['status'] ?>">
 																		<i class="fa fa-edit"></i>
 																	</a>
 																	<?php if($_SESSION['role']=='administrator'):?>
@@ -255,7 +255,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Middle Name</label>
-                                    <input type="text" class="form-control" placeholder="Enter Middle Name" name="middleName">
+                                    <input type="text" class="form-control" placeholder="Enter Middle Name" name="middleName" id="middleName">
                                 </div>
 								<div class="form-group">
                                     <label>Chairmanship</label>

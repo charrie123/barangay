@@ -8,7 +8,10 @@
 	}
 	
     $id 	= $conn->real_escape_string($_POST['id']);
-	$name 	= $conn->real_escape_string($_POST['name']);
+	$name 	= $conn->real_escape_string($_POST['name']) . " " . $conn->real_escape_string($_POST['last']) . " " . $conn->real_escape_string($_POST['middleName']);
+	$fname 	= $conn->real_escape_string($_POST['name']);
+	$lname 	= $conn->real_escape_string($_POST['last']);
+	$mname 	= $conn->real_escape_string($_POST['middleName']);
 	$chair 	= $conn->real_escape_string($_POST['chair']);
     $pos 	= $conn->real_escape_string($_POST['position']);
 	$start 	= $conn->real_escape_string($_POST['start']);
@@ -17,7 +20,7 @@
 
 	if(!empty($id)){
 
-		$query 		= "UPDATE tblofficials SET `name`='$name', `chairmanship`='$chair', `position`='$pos', termstart='$start', termend='$end', `status`='$status' WHERE id=$id;";	
+		$query 		= "UPDATE tblofficials SET `name`='$name', `chairmanship`='$chair', `position`='$pos', `firstName`='$fname', `lastName`='$lname', `middleName`='$mname', `termstart`='$start', `termend`='$end', `status`='$status' WHERE id=$id;";
 		$result 	= $conn->query($query);
 
 		if($result === true){
@@ -27,7 +30,7 @@
 
 		}else{
 
-			$_SESSION['message'] = $end;
+			$_SESSION['message'] = $result;
 			$_SESSION['success'] = 'danger';
 		}
 
