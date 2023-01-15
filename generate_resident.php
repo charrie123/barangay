@@ -9,7 +9,7 @@
 <html lang="en">
 <head>
 	<?php include 'templates/header.php' ?>
-	<title>Generate Resident Profile -  Barangay Management System</title>
+	<title id="header-title">Generate Resident Profile - <?= ucwords($resident['firstname'].' '.$resident['middlename'].' '.$resident['lastname']) ?></title>
 </head>
 <body>
 <?php include 'templates/loading_screen.php' ?>
