@@ -287,7 +287,8 @@ CREATE TABLE `tblresident` (
   `occupation` varchar(100) DEFAULT NULL,
   `address` text CHARACTER SET utf8mb4 DEFAULT NULL,
   `resident_type` int(11) DEFAULT 1,
-  `remarks` text DEFAULT NULL
+  `remarks` text DEFAULT NULL,
+  `archive` int(11) DEFAULT 0,
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --

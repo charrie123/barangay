@@ -1,6 +1,6 @@
 <?php include 'server/server.php' ?>
 <?php 
-	$query = "SELECT * FROM tblresident";
+	$query = "SELECT * FROM tblresident WHERE archive = 0";
     $result = $conn->query($query);
 
     $resident = array();
@@ -131,7 +131,7 @@
 																<a type="button" data-toggle="tooltip" href="generate_resident.php?id=<?= $row['id'] ?>" class="btn btn-link btn-info" data-original-title="Generate">
 																	<i class="fa fa-file"></i>
 																</a>
-                                                                <a type="button" data-toggle="tooltip" href="model/remove_resident.php?id=<?= $row['id'] ?>" onclick="return confirm('Are you sure you want to delete this resident?');" class="btn btn-link btn-danger" data-original-title="Remove">
+                                                                <a type="button" data-toggle="tooltip" href="model/remove_resident.php?id=<?= $row['id'] ?>" onclick="return confirm('Do you really want to delete?');" class="btn btn-link btn-danger" data-original-title="Remove">
 																	<i class="fa fa-times"></i>
 																</a>
                                                                 <?php endif ?>
