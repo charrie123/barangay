@@ -50,6 +50,19 @@
                             <?php endif ?>
 
                             <div class="card">
+	                            <div class="d-flex justify-content-center">
+	                                <img src="assets/uploads/<?= $brgy_logo ?>" style="margin-bottom: 40px; margin-left: 55px;" width="200" />
+	                            </div>
+	                            <div class="flex">
+	                                <div class="text-center" style="margin-left: 40px;">
+	                                    <h3 class="mb-0">Republic of the Philippines</h3>
+	                                    <h3 class="mb-0">Province of <?= ucwords($province) ?></h3>
+	                                    <h3 class="mb-0"><?= ucwords($town) ?></h3>
+	                                    <h1 class="fw-bold mb-0"><?= ucwords($brgy) ?></i></h2>
+	                                    <p><i>Mobile No. <?= $number ?></i></p>
+	                                    <p><i>fbaccount: barangay_bonbon@yahoo.com</i></p>
+	                                </div>
+	                            </div>
 								<div class="card-header">
 									<div class="card-head-row">
 										<div class="card-title">Revenue Informations</div>
@@ -172,7 +185,19 @@
                 {
                     extend: 'print',
                     className: 'green glyphicon glyphicon-print',
-                    title: 'Report',
+                    title: `<div class="d-flex justify-content-center">
+	                            <img src="assets/uploads/<?= $brgy_logo ?>" style="margin-bottom: 40px; margin-left: 55px;" width="100" />
+	                        </div>
+	                        <div class="flex">
+	                            <div class="text-center" style="margin-left: 40px;">
+	                                <h4 class="mb-0">Republic of the Philippines</h4>
+	                                <h4 class="mb-0">Province of <?= ucwords($province) ?></h4>
+	                                <h4 class="mb-0"><?= ucwords($town) ?></h4>
+	                                <h2 class="fw-bold mb-0"><?= ucwords($brgy) ?></i></h2>
+	                                <p><i>Mobile No. <?= $number ?></i></p>
+	                                <p><i>fbaccount: barangay_bonbon@yahoo.com</i></p>
+	                            </div>
+	                        </div>`,
                     text: 'Print',
                     footer: true,
                     exportOptions: {
