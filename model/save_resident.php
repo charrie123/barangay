@@ -34,43 +34,58 @@
 	  // image file directory
   	$target = "../assets/uploads/resident_profile/".basename($newName);
 	$check = "SELECT id FROM tblresident WHERE national_id='$national_id'";
-	$nat = $conn->query($check)->num_rows;	
+	$nat = $conn->query($check)->num_rows;
 
-	if($nat == 0){
-		if(!empty($fname)){
+	$checkName = "SELECT id FROM tblresident WHERE firstname='$fname' AND middlename='$mname' AND lastname='$lname'";
+	$nameChecker = $conn->query($checkName)->num_rows;
 
-			if(!empty($profile) && !empty($profile2)){
+	if ($nameChecker == 0) {
+		if($nat == 0){
+			if(!empty($fname)){
 
-				$query = "INSERT INTO tblresident (`national_id`,citizenship,`picture`, `firstname`, `middlename`, `lastname`, `alias`, `birthplace`, `birthdate`, age, `civilstatus`, `gender`, `purok`, `voterstatus`, `identified_as`, `phone`, `email`, occupation, `address`) 
-							VALUES ('$national_id','$citizen','$profile','$fname','$mname','$lname','$alias','$bplace','$bdate',$age,'$cstatus','$gender','$purok','$vstatus','$indetity','$number','$email','$occupation','$address')";
+				if(!empty($profile) && !empty($profile2)){
 
-				if($conn->query($query) === true){
+					$query = "INSERT INTO tblresident (`national_id`,citizenship,`picture`, `firstname`, `middlename`, `lastname`, `alias`, `birthplace`, `birthdate`, age, `civilstatus`, `gender`, `purok`, `voterstatus`, `identified_as`, `phone`, `email`, occupation, `address`)
+								VALUES ('$national_id','$citizen','$profile','$fname','$mname','$lname','$alias','$bplace','$bdate',$age,'$cstatus','$gender','$purok','$vstatus','$indetity','$number','$email','$occupation','$address')";
 
-					$_SESSION['message'] = 'Resident Information has been saved!';
-					$_SESSION['success'] = 'success';
-				}
-			}else if(!empty($profile) && empty($profile2)){
+					if($conn->query($query) === true){
 
-				$query = "INSERT INTO tblresident (`national_id`, citizenship, `picture`, `firstname`, `middlename`, `lastname`, `alias`, `birthplace`, `birthdate`, age, `civilstatus`, `gender`, `purok`, `voterstatus`, `identified_as`, `phone`, `email`,occupation, `address`) 
-							VALUES ('$national_id','$citizen','$profile','$fname','$mname','$lname','$alias','$bplace','$bdate',$age,'$cstatus','$gender','$purok','$vstatus','$indetity','$number','$email','$occupation','$address')";
+						$_SESSION['message'] = 'Resident Information has been saved!';
+						$_SESSION['success'] = 'success';
+					}
+				}else if(!empty($profile) && empty($profile2)){
 
-				if($conn->query($query) === true){
+					$query = "INSERT INTO tblresident (`national_id`, citizenship, `picture`, `firstname`, `middlename`, `lastname`, `alias`, `birthplace`, `birthdate`, age, `civilstatus`, `gender`, `purok`, `voterstatus`, `identified_as`, `phone`, `email`,occupation, `address`)
+								VALUES ('$national_id','$citizen','$profile','$fname','$mname','$lname','$alias','$bplace','$bdate',$age,'$cstatus','$gender','$purok','$vstatus','$indetity','$number','$email','$occupation','$address')";
 
-					$_SESSION['message'] = 'Resident Information has been saved!';
-					$_SESSION['success'] = 'success';
-				}
+					if($conn->query($query) === true){
 
-			}else if(empty($profile) && !empty($profile2)){
+						$_SESSION['message'] = 'Resident Information has been saved!';
+						$_SESSION['success'] = 'success';
+					}
 
-				$query = "INSERT INTO tblresident (`national_id`, citizenship, `picture`, `firstname`, `middlename`, `lastname`, `alias`, `birthplace`, `birthdate`, age, `civilstatus`, `gender`, `purok`, `voterstatus`, `identified_as`, `phone`, `email`, occupation, `address`) 
-							VALUES ('$national_id','$citizen','$newName','$fname','$mname','$lname','$alias','$bplace','$bdate',$age,'$cstatus','$gender','$purok','$vstatus','$indetity','$number','$email','$occupation','$address')";
+				}else if(empty($profile) && !empty($profile2)){
 
-				if($conn->query($query) === true){
+					$query = "INSERT INTO tblresident (`national_id`, citizenship, `picture`, `firstname`, `middlename`, `lastname`, `alias`, `birthplace`, `birthdate`, age, `civilstatus`, `gender`, `purok`, `voterstatus`, `identified_as`, `phone`, `email`, occupation, `address`)
+								VALUES ('$national_id','$citizen','$newName','$fname','$mname','$lname','$alias','$bplace','$bdate',$age,'$cstatus','$gender','$purok','$vstatus','$indetity','$number','$email','$occupation','$address')";
 
-					$_SESSION['message'] = 'Resident Information has been saved!';
-					$_SESSION['success'] = 'success';
+					if($conn->query($query) === true){
 
-					if(move_uploaded_file($_FILES['img']['tmp_name'], $target)){
+						$_SESSION['message'] = 'Resident Information has been saved!';
+						$_SESSION['success'] = 'success';
+
+						if(move_uploaded_file($_FILES['img']['tmp_name'], $target)){
+
+							$_SESSION['message'] = 'Resident Information has been saved!';
+							$_SESSION['success'] = 'success';
+						}
+					}
+
+				}else{
+					$query = "INSERT INTO tblresident (`national_id`, citizenship, `picture`,`firstname`, `middlename`, `lastname`, `alias`, `birthplace`, `birthdate`, age, `civilstatus`, `gender`, `purok`, `voterstatus`, `identified_as`, `phone`, `email`, occupation, `address`)
+								VALUES ('$national_id','$citizen','person.png','$fname','$mname','$lname','$alias','$bplace','$bdate',$age,'$cstatus','$gender','$purok','$vstatus','$indetity','$number','$email','$occupation','$address')";
+
+					if($conn->query($query) === true){
 
 						$_SESSION['message'] = 'Resident Information has been saved!';
 						$_SESSION['success'] = 'success';
@@ -78,23 +93,16 @@
 				}
 
 			}else{
-				$query = "INSERT INTO tblresident (`national_id`, citizenship, `picture`,`firstname`, `middlename`, `lastname`, `alias`, `birthplace`, `birthdate`, age, `civilstatus`, `gender`, `purok`, `voterstatus`, `identified_as`, `phone`, `email`, occupation, `address`) 
-							VALUES ('$national_id','$citizen','person.png','$fname','$mname','$lname','$alias','$bplace','$bdate',$age,'$cstatus','$gender','$purok','$vstatus','$indetity','$number','$email','$occupation','$address')";
 
-				if($conn->query($query) === true){
-
-					$_SESSION['message'] = 'Resident Information has been saved!';
-					$_SESSION['success'] = 'success';
-				}
+				$_SESSION['message'] = 'Please complete the form!';
+				$_SESSION['success'] = 'danger';
 			}
-
 		}else{
-
-			$_SESSION['message'] = 'Please complete the form!';
+			$_SESSION['message'] = 'National ID is already taken. Please enter a unique national ID!';
 			$_SESSION['success'] = 'danger';
 		}
-	}else{
-		$_SESSION['message'] = 'National ID is already taken. Please enter a unique national ID!';
+	}else {
+		$_SESSION['message'] = 'Name already Exist.';
 		$_SESSION['success'] = 'danger';
 	}
      header("Location: ../resident.php");
