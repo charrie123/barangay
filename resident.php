@@ -80,7 +80,6 @@
 												<tr>
 													<th scope="col">Fullname</th>
                                                     <th scope="col">National ID</th>
-													<th scope="col">Nickname</th>
 													<th scope="col">Birthdate</th>
 													<th scope="col">Age</th>
 													<th scope="col">Civil Status</th>
@@ -105,7 +104,6 @@
                                                             <?= ucwords($row['lastname'].', '.$row['firstname'].' '.$row['middlename']) ?>
                                                         </td>
                                                         <td><?= $row['national_id'] ?></td>
-														<td><?= $row['alias'] ?></td>
 														<td><?= $row['birthdate'] ?></td>
 														<td><?= $row['age'] ?></td>
                                                         <td><?= $row['civilstatus'] ?></td>
@@ -145,24 +143,6 @@
 													<?php $no++; endforeach ?>
 												<?php endif ?>
 											</tbody>
-											<tfoot>
-												<tr>
-                                                    <th scope="col">Fullname</th>
-                                                    <th scope="col">National ID</th>
-													<th scope="col">Nickname</th>
-													<th scope="col">Birthdate</th>
-													<th scope="col">Age</th>
-													<th scope="col">Civil Status</th>
-                                                    <th scope="col">Gender</th>
-													<th scope="col">Purok</th>
-                                                    <?php if(isset($_SESSION['username'])):?>
-                                                        <?php if($_SESSION['role']=='administrator'):?>
-													<th scope="col">Voter Status</th>
-                                                    <?php endif ?>
-													<th scope="col">Action</th>
-                                                    <?php endif ?>
-												</tr>
-											</tfoot>
 										</table>
 									</div>
 								</div>
@@ -201,7 +181,7 @@
                                         <input type="file" class="form-control" name="img" accept="image/*">
                                     </div>
                                     <div class="form-group">
-                                        <label>National ID No.</label>
+                                        <label>National ID No.(Optional)</label>
                                         <input type="text" class="form-control" name="national" placeholder="Enter National ID No." maxlength="16" required>
                                     </div>
                                     <div class="form-group">
@@ -323,7 +303,7 @@
                                         <div class="col">
                                             <div class="form-group">
                                                 <label>Contact Number</label>
-                                                <input type="text" class="form-control" placeholder="Enter Contact Number" name="number">
+                                                <input type="text" class="form-control" placeholder="Enter Contact Number" name="number" required>
                                             </div>
                                         </div>
                                         <div class="col">
@@ -392,7 +372,7 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label>National ID No.</label>
+                                        <label>National ID No.(Optional)</label>
                                         <input type="text" class="form-control" name="national" id="nat_id" placeholder="Enter National ID No." maxlength="16">
                                     </div>
                                     <div class="form-group">
@@ -515,7 +495,7 @@
                                         <div class="col">
                                             <div class="form-group">
                                                 <label>Contact Number</label>
-                                                <input type="text" class="form-control" placeholder="Enter Contact Number" name="number" id="number">
+                                                <input type="text" class="form-control" placeholder="Enter Contact Number" name="number" id="editNumber" required>
                                             </div>
                                         </div>
                                         <div class="col">
