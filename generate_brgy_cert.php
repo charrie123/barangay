@@ -221,7 +221,7 @@
                             <form method="POST" action="model/save_pment.php" >
                                 <div class="form-group">
                                     <label>Amount</label>
-                                    <input type="number" class="form-control" name="amount" placeholder="Enter amount to pay" required>
+                                    <input type="number" class="form-control" name="amount" value="50.00" readonly>
                                 </div>
                                 <div class="form-group">
                                     <label>Date Issued</label>
