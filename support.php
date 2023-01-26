@@ -1,6 +1,6 @@
 <?php include 'server/server.php' ?>
 <?php
-    $query = "SELECT * FROM tbl_support ORDER BY `date` DESC";
+    $query = "SELECT * FROM tbl_support WHERE remarks IS NULL ORDER BY `date` DESC";
     $result = $conn->query($query);
 
     $ticket = array();
@@ -95,18 +95,6 @@
                                                     </tr>
                                                 <?php endif ?>
                                             </tbody>
-                                            <tfoot>
-                                                <tr>
-                                                    <th scope="col">No.</th>
-                                                    <th scope="col">Name</th>
-                                                    <th scope="col">Email</th>
-                                                    <th scope="col">Number</th>
-                                                    <th scope="col">Subject</th>
-                                                    <th scope="col">Message</th>
-                                                    <th scope="col">Date</th>
-                                                    <th scope="col">Action</th>
-                                                </tr>
-                                            </tfoot>
                                         </table>
                                     </div>
 								</div>

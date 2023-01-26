@@ -10,12 +10,12 @@
 	$id 	= $conn->real_escape_string($_GET['id']);
 
 	if($id != ''){
-		$query 		= "DELETE FROM tbl_support WHERE id = '$id'";
+		$query      = "UPDATE tbl_support SET remarks = 'Done' WHERE id = '$id'";
 		
 		$result 	= $conn->query($query);
 		
 		if($result === true){
-            $_SESSION['message'] = 'Support has been removed!';
+            $_SESSION['message'] = 'Support has been updated!';
             $_SESSION['success'] = 'danger';
             
         }else{
