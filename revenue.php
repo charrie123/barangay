@@ -14,7 +14,7 @@
 	<?php include 'templates/header.php' ?>
 	<link rel="stylesheet" href="assets/js/plugin/dataTables.dateTime.min.css">
 	<link rel="stylesheet" href="assets/js/plugin/datatables/Buttons-1.6.1/css/buttons.dataTables.min.css">
-	<title>Barangay Revenues -  Barangay Management System</title>
+	<title class="d-flex justify-content-center">Barangay Revenues -  Barangay Management System</title>
 </head>
 <body>
 <?php include 'templates/loading_screen.php' ?>
@@ -172,10 +172,11 @@
                 {
                     extend: 'print',
                     className: 'green glyphicon glyphicon-print',
-                    title: `
+                    title: `Report ` +  ((new Date).getUTCMonth() + 1) + "/" + (new Date).getUTCDate() + "/" + (new Date).getUTCFullYear(),
+                    messageTop: `
 	                            <div class="container">
 	                              <div class="row">
-									<div class="col-sm">
+									<div class="col-sm-2">
 			                            <div class="d-flex justify-content-center">
 			                                <img src="assets/uploads/<?= $brgy_logo ?>" style="margin-bottom: 40px; margin-left: 55px;" width="200" />
 			                            </div>
