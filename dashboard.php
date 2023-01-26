@@ -27,7 +27,7 @@
 	$precinct = $conn->query($query6)->num_rows;
 
 	$date = date('Y-m-d'); 
-	$query8 = "SELECT SUM(amounts) as am FROM tblpayments WHERE `date`='$date'";
+	$query8 = "SELECT SUM(amounts) as am FROM tblpayments";
 	$revenue = $conn->query($query8)->fetch_assoc();
 ?>
 
