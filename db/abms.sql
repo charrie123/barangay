@@ -314,6 +314,7 @@ CREATE TABLE `tbl_support` (
   `number` varchar(20) DEFAULT NULL,
   `subject` varchar(100) DEFAULT NULL,
   `message` text DEFAULT NULL,
+  `remarks` varchar(100) DEFAULT NULL,
   `date` timestamp NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
