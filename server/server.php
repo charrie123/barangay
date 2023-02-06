@@ -1,5 +1,5 @@
 <?php
-$database	= 'barangay_system';
+$database	= 'barangay';
 $username	= 'root';
 $host		= 'localhost';
 $password	= '';
