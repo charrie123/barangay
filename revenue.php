@@ -97,11 +97,11 @@
 											</tbody>
 											<tfoot>
 												<tr>
-                                                    <th scope="col">Date</th>
-													<th scope="col">Recipient</th>
-													<th scope="col">Details</th>
+                                                    <th scope="col">TOTAL:</th>
+													<th scope="col"></th>
+													<th scope="col"></th>
 													<th scope="col" id="total">P <?= number_format($price,2) ?></th>
-													<th scope="col">Username</th>
+													<th scope="col"></th>
 												</tr>
 											</tfoot>
 										</table>

@@ -102,13 +102,7 @@
 												<?php endif ?>
 											</tbody>
 											<tfoot>
-												<tr>
-													<th scope="col">No.</th>
-													<th scope="col">Username</th>
-													<th scope="col">User Type</th>
-													<th scope="col">Created At</th>
-													<th scope="col">Action</th>
-												</tr>
+												
 											</tfoot>
 										</table>
 									</div>

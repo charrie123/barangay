@@ -143,17 +143,7 @@
 												<?php endif ?>
 											</tbody>
 											<tfoot>
-												<tr>
-													<th scope="col">Fullname</th>
-													<th scope="col">Chairmanship</th>
-													<th scope="col">Position</th>
-													<?php if(isset($_SESSION['username'])):?>
-														<?php if($_SESSION['role']=='administrator'):?>
-															<th>Status</th>
-														<?php endif ?>
-														<th>Action</th>
-													<?php endif?>
-												</tr>
+												
 											</tfoot>
 										</table>
 									</div>

@@ -98,12 +98,7 @@
                                                 <?php endif ?>
                                             </tbody>
                                             <tfoot>
-                                                <tr>
-                                                    <th scope="col">No.</th>
-                                                    <th scope="col">Purok</th>
-                                                    <th scope="col">Details</th>
-                                                    <th scope="col">Action</th>
-                                                </tr>
+                                                
                                             </tfoot>
                                         </table>
                                     </div>

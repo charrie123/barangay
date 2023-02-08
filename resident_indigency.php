@@ -117,22 +117,7 @@
 												<?php endif ?>
 											</tbody>
 											<tfoot>
-												<tr>
-                                                    <th scope="col">Fullname</th>
-													<th scope="col">National ID</th>
-													<th scope="col">Alias</th>
-													<th scope="col">Birthdate</th>
-													<th scope="col">Age</th>
-													<th scope="col">Civil Status</th>
-                                                    <th scope="col">Gender</th>
-													<th scope="col">Purok</th>
-													<?php if(isset($_SESSION['username'])):?>
-														<?php if($_SESSION['role']=='administrator'):?>
-													<th scope="col">Voter Status</th>
-													<?php endif ?>
-													<th scope="col">Action</th>
-													<?php endif ?>
-												</tr>
+												
 											</tfoot>
 										</table>
 									</div>

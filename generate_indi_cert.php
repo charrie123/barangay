@@ -22,7 +22,8 @@
 <html lang="en">
 <head>
 	<?php include 'templates/header.php' ?>
-	<title>Certificate of Indigency -  Barangay Management System</title>
+	<title>Certificate of Indigency - <?= ucwords($resident['firstname'].' '.$resident['middlename'].' '.$resident['lastname']) ?></title>
+</head>
     <style>
         @page  
         { 

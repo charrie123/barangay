@@ -22,7 +22,8 @@
 <html lang="en">
 <head>
 	<?php include 'templates/header.php' ?>
-	<title>Barangay Certificate -  Barangay Management System</title>
+	<title>Barangay Certificate -  <?= ucwords($resident['firstname'].' '.$resident['middlename'].' '.$resident['lastname']) ?></title>
+</head>
 
     <style>
 .bg-image {
