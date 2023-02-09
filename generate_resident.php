@@ -133,7 +133,7 @@
                                             </tr>
                                             <tr>
                                                 <td>Address:</td>
-                                                <td>+63 <?= ucwords(trim($resident['address'] ? $resident['address'] : "")) ?></td>
+                                                <td><?= ucwords(trim($resident['address'] ? $resident['address'] : "")) ?></td>
                                             </tr>
                                             <tr>
                                                 <td>Remarks:</td>
