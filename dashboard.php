@@ -51,11 +51,11 @@
 
 		<div class="main-panel">
 			<div class="content">
-				<div class="panel-header" style="background-color: #5E454B;">
+				<div class="panel-header" style="background: linear-gradient(45deg,#F2D388,#CAABF5);">
 					<div class="page-inner">
 						<div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
 							<div>	
-								<h2 style="font-style: Century-gothic; color: white;">Dashboard</h2>
+								<h2 style="font-style: Century-gothic; color:black ;">Dashboard</h2>
 							</div>
 						</div>
 					</div>
@@ -71,7 +71,7 @@
 					<div class="row">
 						<div class="col-md-4">
 							<div class="card card-stats card-round" 
-							style="background: linear-gradient(45deg,#AF7AB3,#E4D192);
+							style="background: linear-gradient(45deg,#F2D388,#CAABF5);"
 								   box-shadow: 2px 2px 5px;">
 								<div class="card-body" href="resident_info.php?state=all">
 									<div class="row">
@@ -84,7 +84,7 @@
 										</div>
 										<div class="col-6 col-stats">
 											<div class="numbers mt-4">
-												<h2 class="fw-bold text-uppercase" style="color:white; text-shadow: 2px 2px 5px #354259;">Population</h2>
+											<br>	<h2 class="fw-bold text-uppercase" style="color:white; text-shadow: 2px 2px 5px #354259;">Population</h2> </br>
 												<h3 class="fw-bold text-uppercase" style="text-shadow: 2px 2px 5px lightblue;"><?= number_format($total) ?></h3>
 											</div>
 										</div>
@@ -97,7 +97,7 @@
 						</div>
 						<div class="col-md-4">
 							<div class="card card-stats card-round" 
-							style="background: linear-gradient(45deg,#E9DAC1,#9ED2C6);
+							style="background: linear-gradient(45deg,#F2D388,#CAABF5);
 								   border-bottom-color: green;
 								   box-shadow: 2px 2px 5px;">
 								<div class="card-body">
@@ -111,7 +111,7 @@
 										</div>
 										<div class="col-6 col-stats">
 											<div class="numbers mt-4">
-												<h2 class="fw-bold text-uppercase" style="color:white; text-shadow: 2px 2px 5px #354259;">Male</h2>
+												<br> <h2 class="fw-bold text-uppercase" style="color:white; text-shadow: 2px 2px 5px #354259;">Male</h2> </br>
 												<h3 class="fw-bold" style="text-shadow: 2px 2px 5px #EEEEEE;"><?= number_format($male) ?></h3>
 											</div>
 										</div>
@@ -124,7 +124,7 @@
 						</div>
 						<div class="col-md-4">
 							<div class="card card-stats card-round" 
-							style="background: linear-gradient(45deg,#FFE3E1,#FF9494);
+							style="background: linear-gradient(45deg,#F2D388,#CAABF5);
 								   border-bottom-color: green;
 								   box-shadow: 2px 2px 5px;">
 								<div class="card-body">
@@ -138,7 +138,7 @@
 										</div>
 										<div class="col-6 col-stats">
 											<div class="numbers mt-4">
-												<h2 class="fw-bold text-uppercase" style="color:white; text-shadow: 2px 2px 5px #354259;">Female</h2>
+												<br> <h2 class="fw-bold text-uppercase" style="color:white; text-shadow: 2px 2px 5px #354259;">Female</h2> </br>
 												<h3 class="fw-bold text-uppercase" style="text-shadow: 2px 2px 5px #EEEEEE;"><?= number_format($female) ?></h3>
 											</div>
 										</div>
@@ -154,7 +154,7 @@
 					<div class="row">
 						<div class="col-md-4">
 							<div class="card card-stats card-round"
-							style="background: linear-gradient(45deg,#789395,#B4CFB0);
+							style="background: linear-gradient(45deg,#F2D388,#CAABF5);
 								   border-bottom-color: green;
 								   box-shadow: 2px 2px 5px;">
 								<div class="card-body">
@@ -168,7 +168,7 @@
 										</div>
 										<div class="col-6 col-stats">
 											<div class="numbers mt-4">
-												<h2 class="fw-bold text-uppercase" style="color:white; text-shadow: 2px 2px 5px #354259;">Voters</h2>
+											<br>	<h2 class="fw-bold text-uppercase" style="color:white; text-shadow: 2px 2px 5px #354259;">Voters</h2> </br>
 												<h3 class="fw-bold text-uppercase"><?= number_format($totalvoters) ?></h3>
 											</div>
 										</div>
@@ -181,7 +181,7 @@
 						</div>
 						<div class="col-md-4">
 							<div class="card card-stats card-round"
-							style="background: linear-gradient(45deg,#9AD0EC,#1572A1);
+							style="background: linear-gradient(45deg,#F2D388,#CAABF5);
 								   border-bottom-color: green;
 								   box-shadow: 2px 2px 5px;">
 								<div class="card-body">
@@ -195,7 +195,7 @@
 										</div>
 										<div class="col-6 col-stats">
 											<div class="numbers mt-4">
-												<h2 class="fw-bold text-uppercase" style="color:white; text-shadow: 2px 2px 5px #354259;">Non Voters</h2>
+											<br>	<h2 class="fw-bold text-uppercase" style="color:white; text-shadow: 2px 2px 5px #354259;">Non Voters</h2> </br>
 												<h3 class="fw-bold text-uppercase"><?= number_format($non) ?></h3>
 											</div>
 										</div>
@@ -208,7 +208,7 @@
 						</div>
 						<div class="col-md-4">
 							<div class="card card-stats card-round" 
-							style="background: linear-gradient(45deg,#E4D1B9,#BE8C63);
+							style="background: linear-gradient(45deg,#F2D388,#CAABF5);
 								   border-bottom-color: green;
 								   box-shadow: 2px 2px 5px;">
 								<div class="card-body">
@@ -235,7 +235,7 @@
 						</div>
 						<div class="col-md-4">
 							<div class="card card-stats card-round"
-							style="background: linear-gradient(45deg,#BF8B67,#632626);
+							style="background: linear-gradient(45deg,#F2D388,#CAABF5);
 								   border-bottom-color: green;
 								   box-shadow: 2px 2px 5px;">
 								<div class="card-body">
@@ -249,7 +249,7 @@
 										</div>
 										<div class="col-6 col-stats">
 											<div class="numbers mt-4">
-												<h2 class="fw-bold text-uppercase" style="color:white; text-shadow: 2px 2px 5px #354259;">Purok Number</h2>
+											<br> <h2 class="fw-bold text-uppercase" style="color:white; text-shadow: 2px 2px 5px #354259;">Purok Number</h2>
 												<h3 class="fw-bold text-uppercase" style="color:white; text-shadow: 2px 2px 5px #354259;"><?= number_format($purok) ?></h3>
 											</div>
 										</div>
@@ -262,7 +262,7 @@
 						</div>
 						<div class="col-md-4">
 							<div class="card card-stats card-round" 
-							style="background: linear-gradient(45deg,#B97A95,#716F81);
+							style="background: linear-gradient(45deg,#F2D388,#CAABF5);
 								   border-bottom-color: green;
 								   box-shadow: 2px 2px 5px;">
 								<div class="card-body">

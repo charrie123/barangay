@@ -2,7 +2,7 @@
 
 <div class="main-header">
     <!-- Logo Header -->
-    <div class="logo-header" style="background: linear-gradient(45deg,#F2D388,#C98474);">
+    <div class="logo-header" style="background: linear-gradient(45deg,#CAABF5,#F2D388);">
         
         <a href="dashboard.php" class="logo">
             <img src="assets/img/logo-brgy.png" style="height:45px; width: 45px" alt="navbar brand" class="navbar-brand"> <span class="text-light ml-2 fw-bold" style="font-size:15px">BRGY. BONBON</span>
@@ -22,7 +22,7 @@
     <!-- End Logo Header -->
 
     <!-- Navbar Header -->
-    <nav class="navbar navbar-header navbar-expand-lg" style="background-image: url('assets/img/haha.jpg'); background-repeat: no-repeat; background-size: cover;">
+    <nav class="navbar navbar-header navbar-expand-lg" style="background: linear-gradient(45deg,#F2D388,#CAABF5);">
         
         <div class="container-fluid">
             <ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
