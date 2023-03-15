@@ -182,7 +182,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label>National ID No.(Optional)</label>
-                                        <input type="text" class="form-control" name="national" placeholder="Enter National ID No." maxlength="16" required>
+                                        <input type="text" class="form-control" name="national" placeholder="Enter National ID No." maxlength="16" >
                                     </div>
                                     <div class="form-group">
                                         <label>Citizenship</label>
