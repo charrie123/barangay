@@ -35,11 +35,11 @@
 
 		<div class="main-panel">
 			<div class="content">
-				<div class="panel-header bg-primary-gradient">
+				<div class="panel-header" style="background: linear-gradient(45deg,#CAABF5,#CAABF5);">
 					<div class="page-inner">
 						<div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
 							<div>
-								<h2 class="text-white fw-bold">Barangay Certificate</h2>
+								<h2 class="text-white fw-bold" style="font-style: Century-gothic; color:white ;  text-shadow: 2px 2px 5px #354259;">BARANGAY CERTIFICATE</h2>
 							</div>
 						</div>
 					</div>

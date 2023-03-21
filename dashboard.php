@@ -55,7 +55,7 @@
 					<div class="page-inner">
 						<div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
 							<div>	
-								<h2 style="font-style: Century-gothic; color:black ;">BARANGAY BONBON DASHBOARD</h2>
+								<h2 class="fw-bold text-uppercase" style="font-style: Century-gothic; color:white ;  text-shadow: 2px 2px 5px #354259;">BARANGAY BONBON DASHBOARD</h2>
 							</div>
 						</div>
 					</div>
