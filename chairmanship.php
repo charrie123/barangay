@@ -27,7 +27,7 @@ while($row = $result->fetch_assoc()){
 
 		<div class="main-panel">
 			<div class="content">
-				<div class="panel-header bg-primary-gradient">
+				<div class="panel-header" style="background: linear-gradient(45deg,#cbbeb5,#3a3500);">>
 					<div class="page-inner">
 						<div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
 							<div>

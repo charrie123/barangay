@@ -51,7 +51,7 @@
 
 		<div class="main-panel">
 			<div class="content">
-				<div class="panel-header" style="background: linear-gradient(45deg,#CAABF5,#CAABF5);">
+				<div class="panel-header" style="background: linear-gradient(45deg,#cbbeb5,#3a3500);">
 					<div class="page-inner">
 						<div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
 							<div>	
@@ -71,7 +71,7 @@
 					<div class="row">
 						<div class="col-md-4">
 							<div class="card card-stats card-round" 
-							style="background: linear-gradient(45deg,#CAABF5,#CAABF5);"
+							style="background: linear-gradient(45deg,#cbbeb5,#516458);"
 								   box-shadow: 2px 2px 5px;">
 								<div class="card-body" href="resident_info.php?state=all">
 									<div class="row">
@@ -97,7 +97,7 @@
 						</div>
 						<div class="col-md-4">
 							<div class="card card-stats card-round" 
-							style="background: linear-gradient(45deg,#CAABF5,#CAABF5);
+							style="background: linear-gradient(45deg,#cbbeb5,#516458);
 								   border-bottom-color: green;
 								   box-shadow: 2px 2px 5px;">
 								<div class="card-body">
@@ -124,7 +124,7 @@
 						</div>
 						<div class="col-md-4">
 							<div class="card card-stats card-round" 
-							style="background: linear-gradient(45deg,#CAABF5,#CAABF5);
+							style="background: linear-gradient(45deg,#cbbeb5,#516458);
 								   border-bottom-color: green;
 								   box-shadow: 2px 2px 5px;">
 								<div class="card-body">
@@ -154,7 +154,7 @@
 					<div class="row">
 						<div class="col-md-4">
 							<div class="card card-stats card-round"
-							style="background: linear-gradient(45deg,#CAABF5,#CAABF5);
+							style="background: linear-gradient(45deg,#cbbeb5,#516458);
 								   border-bottom-color: green;
 								   box-shadow: 2px 2px 5px;">
 								<div class="card-body">
@@ -181,7 +181,7 @@
 						</div>
 						<div class="col-md-4">
 							<div class="card card-stats card-round"
-							style="background: linear-gradient(45deg,#CAABF5,#CAABF5);
+							style="background: linear-gradient(45deg,#cbbeb5,#516458);
 								   border-bottom-color: green;
 								   box-shadow: 2px 2px 5px;">
 								<div class="card-body">
@@ -208,7 +208,7 @@
 						</div>
 						<div class="col-md-4">
 							<div class="card card-stats card-round" 
-							style="background: linear-gradient(45deg,#CAABF5,#CAABF5);
+							style="background: linear-gradient(45deg,#cbbeb5,#516458);
 								   border-bottom-color: green;
 								   box-shadow: 2px 2px 5px;">
 								<div class="card-body">
@@ -235,7 +235,7 @@
 						</div>
 						<div class="col-md-4">
 							<div class="card card-stats card-round"
-							style="background: linear-gradient(45deg,#CAABF5,#CAABF5);
+							style="background: linear-gradient(45deg,#cbbeb5,#516458);
 								   border-bottom-color: green;
 								   box-shadow: 2px 2px 5px;">
 								<div class="card-body">
@@ -262,7 +262,7 @@
 						</div>
 						<div class="col-md-4">
 							<div class="card card-stats card-round" 
-							style="background: linear-gradient(45deg,#CAABF5,#CAABF5);
+							style="background: linear-gradient(45deg,#cbbeb5,#516458);
 								   border-bottom-color: green;
 								   box-shadow: 2px 2px 5px;">
 								<div class="card-body">

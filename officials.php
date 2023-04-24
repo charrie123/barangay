@@ -37,7 +37,7 @@
  
 		<div class="main-panel">
 			<div class="content">
-				<div class="panel-header" style="background: linear-gradient(45deg,#CAABF5,#CAABF5);">
+				<div class="panel-header" style="background: linear-gradient(45deg,#cbbeb5,#3a3500);">
 					<div class="page-inner">
 						<div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
 							<div>
@@ -57,14 +57,14 @@
 						
 						<div class="col-md-12">
 							<div class="card">
-								<div class="card-body" style="background: linear-gradient(45deg,#CAABF5,#CAABF5);">
+								<div class="card-body" style="background: linear-gradient(45deg,#cbbeb5,#3a3500);">
 									<div class="d-flex flex-wrap pb-2 justify-content-between">
 										<div class="px-2 pb-2 pb-md-0 text-center">
 											<img src="assets/uploads/<?= $brgy_logo ?>" class="img-fluid" width="100">
 										</div>
 										<div class="px-2 pb-2 pb-md-0 text-center">
-											<h2 class="fw-bold mt-3"><?= ucwords($brgy) ?></h2>
-											<h4 class="fw-bold mt-3"><i><?= ucwords($town) ?></i></h4>
+											<h2 style="font-style: Century-gothic; color:white ; text-shadow: 2px 2px 5px #354259;" class="fw-bold mt-3"><?= ucwords($brgy) ?></h2>
+											<h4 style="font-style: Century-gothic; color:white ; text-shadow: 2px 2px 5px #354259;" class="fw-bold mt-3"><i><?= ucwords($town) ?></i></h4>
 										</div>
 										<div class="px-2 pb-2 pb-md-0 text-center">
 											<img src="assets/img/brgy-logo.png" class="img-fluid" width="100" style="visibility:hidden;">

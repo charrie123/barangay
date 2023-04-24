@@ -35,7 +35,7 @@
 
 		<div class="main-panel">
 			<div class="content">
-				<div class="panel-header" style="background: linear-gradient(45deg,#CAABF5,#CAABF5);">
+				<div class="panel-header" style="background: linear-gradient(45deg,#cbbeb5,#3a3500);">
 					<div class="page-inner">
 						<div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
 							<div>

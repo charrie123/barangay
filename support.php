@@ -28,7 +28,7 @@
 
 		<div class="main-panel">
 			<div class="content">
-				<div class="panel-header bg-primary-gradient">
+				<div class="panel-header" style="background: linear-gradient(45deg,#cbbeb5,#3a3500);">>
 					<div class="page-inner">
 						<div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
 							<div>
@@ -60,8 +60,7 @@
                                             <thead>
                                                 <tr>
                                                     <th scope="col">No.</th>
-                                                    <th scope="col">Name</th>
-                                                    <th scope="col">Email</th>
+                                                    <th scope="col">Staff Name</th>
                                                     <th scope="col">Number</th>
                                                     <th scope="col">Subject</th>
                                                     <th scope="col">Message</th>
@@ -75,7 +74,6 @@
                                                     <tr>
                                                         <td><?= $no ?></td>
                                                         <td><?= $row['name'] ?></td>
-                                                        <td><a href="mailto:<?= $row['email'] ?>"><?= $row['email'] ?></a></td>
                                                         <td><a href="tel:<?= $row['number'] ?>"><?= $row['number'] ?></a></td>
                                                         <td><?= $row['subject'] ?></td>
                                                         <td><?= $row['message'] ?></td>
