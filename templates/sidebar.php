@@ -158,6 +158,11 @@ $current_page = PageName();
                                     <span class="sub-item">Chairmanship</span>
                                 </a>
                             </li>
+                            <li class="<?= $current_page=='archive.php' ? 'active' : null ?>">
+                                <a href="archive.php">
+                                    <span class="sub-item">Archive</span>
+                                </a>
+                            </li>
                             
                             <?php if($_SESSION['role']=='staff'):?>
                                 <li>
@@ -186,6 +191,8 @@ $current_page = PageName();
                                         <span class="sub-item">Restore</span>
                                     </a>
                                 </li>
+                             
+                               
                             <?php endif ?>
                         </ul>
                     </div>

@@ -1,6 +1,7 @@
 <?php include 'server/server.php' ?>
 <?php 
-	$query = "SELECT * FROM tblresident";
+$query = "SELECT * FROM tblresident WHERE archive =0 ";
+	// $query = "SELECT * FROM tblresident";
     $result = $conn->query($query);
 
     $resident = array();

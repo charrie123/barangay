@@ -10,12 +10,13 @@
 	$id 	= $conn->real_escape_string($_GET['id']);
 
 	if($id != ''){
+		// $query 		= "DELETE FROM tblresident WHERE id = '$id'";
 		$query 		= "UPDATE tblresident SET archive = 1 WHERE id = '$id'";
 		
 		$result 	= $conn->query($query);
 		
 		if($result === true){
-            $_SESSION['message'] = 'Resident has been removed!';
+            $_SESSION['message'] = 'Resident has been Archived!';
             $_SESSION['success'] = 'danger';
             
         }else{
