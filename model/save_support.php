@@ -8,14 +8,15 @@
     }
 
 	$name 	    = $conn->real_escape_string($_POST['name']);
-	$email 	    = $conn->real_escape_string($_POST['email']);
+	// $email 	    = $conn->real_escape_string($_POST['email']);
     $number 	= $conn->real_escape_string($_POST['number']);
 	$subject 	= $conn->real_escape_string($_POST['subject']);
     $message 	= $conn->real_escape_string($_POST['message']);
 
-    if(!empty($name) && !empty($email) && !empty($subject) && !empty($message)){
-
-        $insert  = "INSERT INTO tbl_support (`name`, email, `number`, `subject`, `message`) VALUES ('$name', '$email', '$number', '$subject', '$message')";
+    // if(!empty($name) && !empty($email) && !empty($subject) && !empty($message)){
+        if(!empty($name) && !empty($number) && !empty($subject) && !empty($message)){
+            
+        $insert  = "INSERT INTO tbl_support (`name`,  `number`, `subject`, `message`) VALUES ('$name',  '$number', '$subject', '$message')";
         $result  = $conn->query($insert);
 
         if($result === true){

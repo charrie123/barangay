@@ -6,7 +6,7 @@
 			header("Location: " . $_SERVER["HTTP_REFERER"]);
 		}
 	}
-
+	$id 		= $conn->real_escape_string($_POST['id']);
 	$national_id 		= $conn->real_escape_string($_POST['national']);
 	$citizen 		= $conn->real_escape_string($_POST['citizenship']);
 	$fname 		= $conn->real_escape_string($_POST['fname']);
@@ -33,7 +33,7 @@
 
 	  // image file directory
   	$target = "../assets/uploads/resident_profile/".basename($newName);
-	$check = "SELECT id FROM tblresident WHERE national_id='$national_id'";
+	$check = "SELECT id FROM tblresident WHERE id='$id'";
 	$nat = $conn->query($check)->num_rows;
 
 	$checkName = "SELECT id FROM tblresident WHERE firstname='$fname' AND middlename='$mname' AND lastname='$lname'";

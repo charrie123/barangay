@@ -85,16 +85,16 @@
             <div class="modal-body">
                 <form method="POST" action="model/save_support.php">
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-12">
                             <div class="form-group">
                                 <input type="text" class="form-control" placeholder="Enter Name" name="name" required >
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <!-- <div class="col-md-6">
                             <div class="form-group">
                                 <input type="email" class="form-control" placeholder="Enter Email Address" name="email" required >
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="Enter Contact Number(optional)" name="number">

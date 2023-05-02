@@ -234,7 +234,7 @@
                                         <div class="col">
                                             <div class="form-group">
                                                 <label>Age</label>
-                                                <input type="number" class="form-control" placeholder="Enter Age" min="1" id="sage" name="age" required>
+                                                <input type="number" class="form-control" placeholder="Age" min="1" id="sage" name="age" readonly>
                                                 </div>
                                             </div>
                                             <div class="col">
