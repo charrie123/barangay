@@ -7,6 +7,18 @@
 	while($row = $result->fetch_assoc()){
 		$revenue[] = $row; 
 	}
+	$query1 = "SELECT * FROM tblofficials JOIN tblposition ON tblofficials.position=tblposition.id WHERE tblposition.position NOT IN ('SK Chairrman','Secretary','Treasurer')
+                AND `status`='Active' ORDER BY `order` ASC";
+    $result1 = $conn->query($query1);
+    $officials = array();
+	while($row = $result1->fetch_assoc()){
+		$officials[] = $row; 
+	}
+
+    $c = "SELECT * FROM tblofficials JOIN tblposition ON tblofficials.position=tblposition.id WHERE tblposition.position='Captain'";
+    $captain = $conn->query($c)->fetch_assoc();
+    $s = "SELECT * FROM tblofficials JOIN tblposition ON tblofficials.position=tblposition.id WHERE tblposition.position='Secretary'";
+    $sec = $conn->query($s)->fetch_assoc();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -194,17 +206,46 @@
 			                            </div>
 									</div>
 								</div>
-							</div>`,
+							</div>` ,
+							messageBottom: `
+                <div class = "col-sm">
+					<div class="flex">
+					<div class="text-center" style="margin-left:40px;">
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<h2 class="text-uppercase text-left" style="margin-top:50px;">NOT VALID WITHOUT SEAL:</h2>
+					<br>
+					<br>
+					<br>
+					<div class="p-3 text-right mr-3">
+					<h2 class"fw-bold m-0 text-uppercase"><?=ucwords($captain['name']) ?></h2>
+					<p class="p-3 text-right mr-3">PUNONG BARANGAY</p>
+				</div>
+                        </div>
+                    </div>
+                </div>`,
                     text: 'Print',
                     footer: true,
                     exportOptions: {
                         modifier: {
                             page: 'current'
+							
                         }
                     }
+					
                 }
+				
 				],
 			});
+
+			
 
 			// Refilter the table
 			$('#min, #max').on('change', function () {
